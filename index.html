@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Heathrow Layover Tours | Elite Private London Experiences</title>
-  <meta name="description" content="Elite private layover tours from Heathrow with premium service, luxury positioning, and direct WhatsApp booking." />
+  <title>London Private Tours | Heathrow & Hotel Pickup</title>
+  <meta name="description" content="Private London tours with Heathrow, hotel, or London accommodation pickup. Premium sightseeing experiences for couples, families, business travellers, and layover guests." />
   <style>
     :root{
-      --bg:#07090d;
-      --bg-soft:#11151c;
-      --panel:#0f1319;
-      --card:#121821;
-      --text:#f5f1e8;
-      --muted:#b8b1a3;
-      --line:rgba(207,168,90,.18);
-      --gold:#cfa85a;
-      --gold-dark:#9b7b3f;
+      --bg:#0b1220;
+      --bg2:#16233d;
+      --card:#ffffff;
+      --soft:#f4f7fb;
+      --text:#101828;
+      --muted:#667085;
+      --line:#e4e7ec;
+      --accent:#cf1f2e;
+      --accent-dark:#a51622;
       --white:#ffffff;
-      --shadow:0 20px 50px rgba(0,0,0,.35);
+      --shadow:0 20px 45px rgba(2, 12, 27, 0.12);
       --radius:20px;
-      --max:1180px;
+      --max:1140px;
     }
 
     *{box-sizing:border-box}
@@ -27,21 +27,25 @@
     body{
       margin:0;
       font-family:Arial, Helvetica, sans-serif;
-      background:linear-gradient(180deg,#07090d 0%, #0b1017 100%);
       color:var(--text);
+      background:#fff;
       line-height:1.6;
     }
 
     a{text-decoration:none;color:inherit}
-    .container{width:min(var(--max), calc(100% - 24px));margin:0 auto}
+
+    .container{
+      width:min(var(--max), calc(100% - 24px));
+      margin:0 auto;
+    }
 
     .header{
       position:sticky;
       top:0;
-      z-index:100;
-      background:rgba(7,9,13,.88);
-      backdrop-filter:blur(12px);
-      border-bottom:1px solid rgba(207,168,90,.1);
+      z-index:50;
+      background:rgba(11,18,32,.92);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(255,255,255,.08);
     }
 
     .nav{
@@ -56,38 +60,36 @@
       display:flex;
       align-items:center;
       gap:12px;
+      color:#fff;
     }
 
     .brand-icon{
-      width:44px;
-      height:44px;
-      border-radius:14px;
+      width:42px;
+      height:42px;
+      border-radius:12px;
       display:grid;
       place-items:center;
-      background:linear-gradient(135deg,var(--gold),var(--gold-dark));
-      color:#111;
+      background:var(--accent);
       font-size:20px;
       font-weight:bold;
-      box-shadow:0 10px 24px rgba(207,168,90,.25);
     }
 
     .brand h2{
       margin:0;
       font-size:18px;
-      color:var(--text);
     }
 
     .brand p{
-      margin:2px 0 0;
-      font-size:12px;
-      color:var(--muted);
+      margin:0;
+      font-size:13px;
+      color:rgba(255,255,255,.72);
     }
 
     .nav-links{
       display:flex;
       align-items:center;
       gap:18px;
-      color:var(--text);
+      color:#fff;
       font-size:14px;
       flex-wrap:wrap;
     }
@@ -98,60 +100,60 @@
       border-radius:12px;
       font-weight:bold;
       transition:.2s ease;
-      border:1px solid transparent;
     }
 
     .btn:hover{transform:translateY(-1px)}
 
-    .btn-gold{
-      background:linear-gradient(135deg,var(--gold),var(--gold-dark));
-      color:#111;
+    .btn-primary{
+      background:var(--accent);
+      color:#fff;
     }
 
-    .btn-outline{
-      border-color:rgba(207,168,90,.28);
-      color:var(--text);
+    .btn-primary:hover{
+      background:var(--accent-dark);
+    }
+
+    .btn-secondary{
       background:transparent;
+      color:#fff;
+      border:1px solid rgba(255,255,255,.24);
     }
 
     .hero{
-      padding:84px 0 64px;
-      background:
-        radial-gradient(circle at top right, rgba(207,168,90,.18), transparent 25%),
-        radial-gradient(circle at left 20% top 25%, rgba(207,168,90,.1), transparent 20%),
-        linear-gradient(135deg,#07090d 0%, #0b1017 55%, #11151c 100%);
+      background:linear-gradient(135deg, var(--bg) 0%, var(--bg2) 55%, #243b64 100%);
+      color:#fff;
+      padding:72px 0 56px;
     }
 
     .hero-grid{
       display:grid;
-      grid-template-columns:1.15fr .85fr;
-      gap:30px;
+      grid-template-columns:1.1fr .9fr;
+      gap:28px;
       align-items:center;
     }
 
     .eyebrow{
       display:inline-block;
-      padding:8px 14px;
+      padding:7px 12px;
       border-radius:999px;
-      background:rgba(207,168,90,.08);
-      border:1px solid rgba(207,168,90,.18);
-      color:var(--gold);
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.1);
       font-size:12px;
-      text-transform:uppercase;
       letter-spacing:.08em;
+      text-transform:uppercase;
       font-weight:bold;
+      color:#ffd0d4;
     }
 
     .hero h1{
-      font-size:clamp(40px, 6vw, 74px);
-      line-height:1.02;
+      font-size:clamp(38px, 6vw, 66px);
+      line-height:1.03;
       margin:18px 0 16px;
-      letter-spacing:-1.4px;
     }
 
-    .hero .lead{
-      max-width:700px;
-      color:var(--muted);
+    .hero p.lead{
+      max-width:690px;
+      color:rgba(255,255,255,.86);
       font-size:18px;
       margin:0 0 24px;
     }
@@ -174,27 +176,27 @@
 
     .hero-points li{
       padding:9px 12px;
-      border:1px solid rgba(207,168,90,.14);
-      background:rgba(255,255,255,.02);
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.06);
       border-radius:999px;
       font-size:14px;
-      color:var(--text);
+      color:rgba(255,255,255,.9);
     }
 
     .hero-card{
-      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
-      border:1px solid rgba(207,168,90,.18);
+      background:#fff;
+      color:var(--text);
       border-radius:24px;
       padding:24px;
       box-shadow:var(--shadow);
     }
 
-    .tag{
+    .hero-card .tag{
       display:inline-block;
       padding:7px 12px;
       border-radius:999px;
-      background:rgba(207,168,90,.12);
-      color:var(--gold);
+      background:#fff1f2;
+      color:var(--accent);
       font-weight:bold;
       font-size:12px;
       margin-bottom:12px;
@@ -211,10 +213,9 @@
     }
 
     .price{
-      font-size:36px;
+      font-size:34px;
       font-weight:bold;
       margin:14px 0 4px;
-      color:var(--gold);
     }
 
     .small{
@@ -223,24 +224,22 @@
     }
 
     .section{
-      padding:76px 0;
+      padding:72px 0;
     }
 
     .section.alt{
-      background:rgba(255,255,255,.015);
-      border-top:1px solid rgba(207,168,90,.08);
-      border-bottom:1px solid rgba(207,168,90,.08);
+      background:var(--soft);
     }
 
     .section-head{
-      max-width:760px;
+      max-width:780px;
       margin-bottom:28px;
     }
 
     .section-head h2{
-      font-size:clamp(30px, 4vw, 48px);
+      font-size:clamp(30px, 4vw, 46px);
       line-height:1.08;
-      margin:12px 0;
+      margin:10px 0 12px;
     }
 
     .section-head p{
@@ -251,29 +250,29 @@
 
     .cards{
       display:grid;
-      grid-template-columns:repeat(4, 1fr);
+      grid-template-columns:repeat(3, 1fr);
       gap:20px;
     }
 
     .card{
-      background:linear-gradient(180deg,#0f1319 0%, #121821 100%);
-      border:1px solid rgba(207,168,90,.14);
+      background:#fff;
+      border:1px solid var(--line);
       border-radius:var(--radius);
       padding:22px;
-      box-shadow:0 10px 28px rgba(0,0,0,.2);
+      box-shadow:0 10px 25px rgba(2,12,27,.05);
     }
 
     .card.featured{
-      border:1px solid rgba(207,168,90,.36);
+      border:2px solid rgba(207,31,46,.18);
       transform:translateY(-4px);
     }
 
-    .card-badge{
+    .card .card-badge{
       display:inline-block;
       padding:6px 10px;
       border-radius:999px;
-      background:rgba(207,168,90,.12);
-      color:var(--gold);
+      background:#fff1f2;
+      color:var(--accent);
       font-size:12px;
       font-weight:bold;
       margin-bottom:12px;
@@ -284,13 +283,13 @@
       font-size:24px;
     }
 
-    .muted{
+    .card .muted{
       color:var(--muted);
-      margin:0 0 16px;
+      margin:0 0 18px;
     }
 
     .card ul{
-      margin:0 0 16px 18px;
+      margin:0 0 18px 18px;
       padding:0;
       color:var(--muted);
     }
@@ -305,9 +304,8 @@
       justify-content:space-between;
       gap:12px;
       padding-top:14px;
-      border-top:1px solid rgba(207,168,90,.12);
+      border-top:1px solid var(--line);
       font-weight:bold;
-      color:var(--gold);
     }
 
     .timeline{
@@ -324,8 +322,8 @@
     }
 
     .time{
-      background:linear-gradient(135deg,var(--gold),var(--gold-dark));
-      color:#111;
+      background:var(--accent);
+      color:#fff;
       border-radius:14px;
       padding:14px 10px;
       text-align:center;
@@ -334,8 +332,8 @@
     }
 
     .timeline-content{
-      background:#0f1319;
-      border:1px solid rgba(207,168,90,.14);
+      background:#fff;
+      border:1px solid var(--line);
       border-radius:18px;
       padding:18px;
     }
@@ -357,11 +355,11 @@
     }
 
     .info-box{
-      background:#0f1319;
-      border:1px solid rgba(207,168,90,.14);
+      background:#fff;
+      border:1px solid var(--line);
       border-radius:20px;
       padding:22px;
-      box-shadow:0 10px 25px rgba(0,0,0,.16);
+      box-shadow:0 10px 25px rgba(2,12,27,.04);
     }
 
     .info-box h3{
@@ -380,8 +378,8 @@
     }
 
     details{
-      background:#0f1319;
-      border:1px solid rgba(207,168,90,.14);
+      background:#fff;
+      border:1px solid var(--line);
       border-radius:16px;
       padding:16px 18px;
     }
@@ -411,8 +409,8 @@
     }
 
     .contact-card{
-      background:#0f1319;
-      border:1px solid rgba(207,168,90,.14);
+      background:#fff;
+      border:1px solid var(--line);
       border-radius:16px;
       padding:16px;
     }
@@ -420,7 +418,6 @@
     .contact-card strong{
       display:block;
       margin-bottom:6px;
-      color:var(--gold);
     }
 
     .contact-card span{
@@ -430,11 +427,11 @@
     }
 
     .form{
-      background:#0f1319;
-      border:1px solid rgba(207,168,90,.14);
+      background:#fff;
+      border:1px solid var(--line);
       border-radius:20px;
       padding:22px;
-      box-shadow:0 10px 25px rgba(0,0,0,.16);
+      box-shadow:0 10px 25px rgba(2,12,27,.04);
     }
 
     .form h3{
@@ -447,7 +444,6 @@
       font-weight:bold;
       margin:0 0 6px;
       font-size:14px;
-      color:var(--text);
     }
 
     .form-group{
@@ -457,11 +453,9 @@
     input, textarea, select{
       width:100%;
       padding:13px 14px;
-      border:1px solid rgba(207,168,90,.16);
+      border:1px solid #d0d5dd;
       border-radius:12px;
       font:inherit;
-      background:#0b1017;
-      color:var(--text);
     }
 
     textarea{
@@ -470,10 +464,9 @@
     }
 
     .footer{
-      background:#05070a;
-      color:rgba(255,255,255,.72);
+      background:var(--bg);
+      color:rgba(255,255,255,.78);
       padding:28px 0 34px;
-      border-top:1px solid rgba(207,168,90,.08);
     }
 
     .footer-wrap{
@@ -496,11 +489,11 @@
       display:grid;
       place-items:center;
       font-size:28px;
-      box-shadow:0 12px 25px rgba(0,0,0,.28);
+      box-shadow:0 12px 25px rgba(0,0,0,.18);
       z-index:80;
     }
 
-    @media (max-width: 980px){
+    @media (max-width: 920px){
       .hero-grid,
       .two-col,
       .contact-wrap,
@@ -536,7 +529,7 @@
       }
 
       .hero{
-        padding-top:50px;
+        padding-top:48px;
       }
 
       .hero h1{
@@ -552,17 +545,18 @@
       <div class="brand">
         <div class="brand-icon">✈</div>
         <div>
-          <h2>Heathrow Layover Tours</h2>
-          <p>Elite Private London Experiences</p>
+          <h2>London Private Tours</h2>
+          <p>Heathrow & Hotel Pickup</p>
         </div>
       </div>
 
       <nav class="nav-links">
         <a href="#tours">Tours</a>
         <a href="#itinerary">Itinerary</a>
+        <a href="#extras">Extras</a>
         <a href="#about">About</a>
         <a href="#faq">FAQ</a>
-        <a href="#contact" class="btn btn-gold">Book Now</a>
+        <a href="#contact" class="btn btn-primary">Book Now</a>
       </nav>
     </div>
   </header>
@@ -570,31 +564,31 @@
   <section class="hero">
     <div class="container hero-grid">
       <div>
-        <span class="eyebrow">Elite Heathrow Experience</span>
-        <h1>Luxury private layover tours from Heathrow</h1>
+        <span class="eyebrow">Private London Sightseeing</span>
+        <h1>Private London tours with Heathrow & hotel pickup</h1>
         <p class="lead">
-          Turn your airport stop into an elegant London experience with private service,
-          premium positioning, iconic landmarks, and a smooth return to your terminal.
+          Flexible, premium London experiences for layovers, hotel guests, couples, families,
+          and business travellers — with optional upgrades for a more personalised journey.
         </p>
 
         <div class="hero-actions">
-          <a href="#contact" class="btn btn-gold">Book Your Tour</a>
-          <a href="#tours" class="btn btn-outline">View Packages</a>
+          <a href="#contact" class="btn btn-primary">Book Your Tour</a>
+          <a href="#tours" class="btn btn-secondary">View Experiences</a>
         </div>
 
         <ul class="hero-points">
-          <li>Private, high-end experience</li>
-          <li>Airport pickup & drop-off</li>
-          <li>Flexible around your flight time</li>
+          <li>Heathrow, hotel, or accommodation pickup</li>
+          <li>Private and flexible experience</li>
+          <li>Optional extras at additional cost</li>
         </ul>
       </div>
 
       <div class="hero-card">
-        <span class="tag">Signature Experience</span>
-        <h3>Luxury Heathrow Layover Tour</h3>
-        <p>Private sightseeing with premium service, elegant stops, and a refined client experience.</p>
-        <div class="price">From £650</div>
-        <div class="small">1–2 guests · luxury private experience</div>
+        <span class="tag">Most Popular</span>
+        <h3>London Highlights Private Tour</h3>
+        <p>Discover London’s most iconic landmarks with a private experience tailored to your timing and preferences.</p>
+        <div class="price">From £350</div>
+        <div class="small">Private experience · Heathrow or hotel pickup</div>
       </div>
     </div>
   </section>
@@ -602,22 +596,23 @@
   <section class="section" id="tours">
     <div class="container">
       <div class="section-head">
-        <span class="eyebrow">Experiences</span>
-        <h2>Private tour collection</h2>
-        <p>From a fast layover experience to a luxury private London journey designed for premium travellers.</p>
+        <span class="eyebrow" style="color:#cf1f2e;background:#fff1f2;border:none;">Experiences</span>
+        <h2>Private London tour packages</h2>
+        <p>Choose the experience that fits your schedule, whether you’re arriving at Heathrow, staying in a London hotel, or exploring the city with family or friends.</p>
       </div>
 
       <div class="cards">
         <div class="card featured">
           <span class="card-badge">Best Seller</span>
-          <h3>Heathrow Layover Express</h3>
-          <p class="muted">Perfect for 5–10 hour layovers</p>
+          <h3>London Express Experience</h3>
+          <p class="muted">Perfect for travellers between flights or short visits</p>
           <ul>
-            <li>Pickup and drop-off at Heathrow</li>
+            <li>Pickup from Heathrow or central London</li>
             <li>Big Ben & Westminster</li>
-            <li>London Eye photo stop</li>
+            <li>London Eye viewpoint</li>
             <li>Buckingham Palace</li>
             <li>Optional extra stop if time allows</li>
+            <li><strong>Optional extras available at additional cost</strong></li>
           </ul>
           <div class="card-footer">
             <span>3–4 hours</span>
@@ -627,51 +622,36 @@
 
         <div class="card">
           <span class="card-badge">Popular</span>
-          <h3>London Highlights Tour</h3>
-          <p class="muted">Ideal for first-time visitors</p>
+          <h3>London Highlights Private Tour</h3>
+          <p class="muted">Great for hotel guests and first-time visitors</p>
           <ul>
+            <li>Pickup from Heathrow, hotel, or accommodation</li>
             <li>Westminster & Big Ben</li>
             <li>Buckingham Palace</li>
-            <li>Trafalgar Square</li>
-            <li>Covent Garden</li>
-            <li>Tower Bridge or St Paul’s</li>
+            <li>Covent Garden or Trafalgar Square</li>
+            <li>Drop-off at hotel or preferred location</li>
+            <li><strong>Optional extras available at additional cost</strong></li>
+          </ul>
+          <div class="card-footer">
+            <span>4–5 hours</span>
+            <span>From £350</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <span class="card-badge">Luxury</span>
+          <h3>Luxury London Experience</h3>
+          <p class="muted">Best for premium travellers and special occasions</p>
+          <ul>
+            <li>Private premium experience</li>
+            <li>Flexible panoramic London route</li>
+            <li>Mayfair, Tower Bridge, or shopping stop</li>
+            <li>Optional dining or custom requests</li>
+            <li>Hotel, Heathrow, or central London drop-off</li>
+            <li><strong>Optional extras available at additional cost</strong></li>
           </ul>
           <div class="card-footer">
             <span>5–6 hours</span>
-            <span>From £450</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <span class="card-badge">Evening</span>
-          <h3>London Night Private Experience</h3>
-          <p class="muted">Best for couples and premium travellers</p>
-          <ul>
-            <li>Iconic night views of London</li>
-            <li>Flexible route</li>
-            <li>Optional dinner stop</li>
-            <li>Photo assistance throughout</li>
-            <li>Return to Heathrow or hotel</li>
-          </ul>
-          <div class="card-footer">
-            <span>3–4 hours</span>
-            <span>From £550</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <span class="card-badge">VIP Luxury</span>
-          <h3>Luxury Private Layover Experience</h3>
-          <p class="muted">Best for executives, couples, and high-end clients</p>
-          <ul>
-            <li>Private chauffeur-style experience</li>
-            <li>Luxury London panoramic route</li>
-            <li>Optional Mayfair / Bond Street stop</li>
-            <li>Optional dining or shopping stop</li>
-            <li>Flexible itinerary with premium feel</li>
-          </ul>
-          <div class="card-footer">
-            <span>4–6 hours</span>
             <span>From £650</span>
           </div>
         </div>
@@ -682,17 +662,17 @@
   <section class="section alt" id="itinerary">
     <div class="container">
       <div class="section-head">
-        <span class="eyebrow">Sample Itinerary</span>
-        <h2>Your luxury Heathrow layover experience</h2>
-        <p>A simple, elegant route built for comfort, iconic photo stops, and a smooth return to the airport.</p>
+        <span class="eyebrow" style="color:#cf1f2e;background:#fff1f2;border:none;">Sample Itinerary</span>
+        <h2>Your private London experience</h2>
+        <p>A flexible route designed for comfort, iconic photo stops, and convenient pickup from Heathrow, your hotel, or your London accommodation.</p>
       </div>
 
       <div class="timeline">
         <div class="timeline-item">
           <div class="time">00:00</div>
           <div class="timeline-content">
-            <h3>Pickup at Heathrow</h3>
-            <p>Meet and greet, luggage assistance, bottled water, and departure for Central London.</p>
+            <h3>Pickup</h3>
+            <p>Meet at Heathrow Airport, your hotel, or your accommodation in London and begin your private experience.</p>
           </div>
         </div>
 
@@ -700,7 +680,7 @@
           <div class="time">01:00</div>
           <div class="timeline-content">
             <h3>Westminster</h3>
-            <p>Big Ben, Houses of Parliament, Westminster Bridge and a London Eye photo stop.</p>
+            <p>Visit Big Ben, the Houses of Parliament, Westminster Bridge, and enjoy views of the London Eye.</p>
           </div>
         </div>
 
@@ -708,23 +688,83 @@
           <div class="time">01:45</div>
           <div class="timeline-content">
             <h3>Buckingham Palace</h3>
-            <p>Short walk, royal stories, refined photos, and a premium sightseeing moment.</p>
+            <p>Enjoy a short walk, royal history, and iconic photos outside Buckingham Palace.</p>
           </div>
         </div>
 
         <div class="timeline-item">
           <div class="time">02:30</div>
           <div class="timeline-content">
-            <h3>Optional premium stop</h3>
-            <p>Choose Mayfair, Covent Garden, Trafalgar Square, or Tower Bridge depending on time and preferences.</p>
+            <h3>Optional stop</h3>
+            <p>Choose Covent Garden, Trafalgar Square, Tower Bridge, or Mayfair depending on your preferences and timing.</p>
           </div>
         </div>
 
         <div class="timeline-item">
-          <div class="time">03:00</div>
+          <div class="time">03:30</div>
           <div class="timeline-content">
-            <h3>Return to Heathrow</h3>
-            <p>Relaxed drive back with time built in for airport drop-off and your next flight.</p>
+            <h3>Drop-off</h3>
+            <p>Return to Heathrow Airport or enjoy drop-off at your hotel or preferred London location.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="extras">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow" style="color:#cf1f2e;background:#fff1f2;border:none;">Optional Extras</span>
+        <h2>Enhance your experience</h2>
+        <p>Customise your private London tour with additional services for a more personalised and premium experience.</p>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Professional Photography</h3>
+          <p class="muted">Capture your London experience with high-quality photos at iconic locations.</p>
+          <div class="card-footer">
+            <span>From £50</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Extended Tour Time</h3>
+          <p class="muted">Add extra hours to explore more of London at a relaxed pace.</p>
+          <div class="card-footer">
+            <span>From £75/hour</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Luxury Vehicle Upgrade</h3>
+          <p class="muted">Upgrade to a premium vehicle for a more comfortable and executive experience.</p>
+          <div class="card-footer">
+            <span>From £100</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Hotel Drop-Off</h3>
+          <p class="muted">End your experience at your hotel or preferred London location.</p>
+          <div class="card-footer">
+            <span>From £50</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Dining Stop</h3>
+          <p class="muted">Add a stop at a restaurant or café during your tour.</p>
+          <div class="card-footer">
+            <span>Custom</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Custom Itinerary</h3>
+          <p class="muted">Fully tailored route based on your interests, shopping, or sightseeing preferences.</p>
+          <div class="card-footer">
+            <span>On request</span>
           </div>
         </div>
       </div>
@@ -734,18 +774,18 @@
   <section class="section" id="about">
     <div class="container two-col">
       <div class="info-box">
-        <h3>Why choose Heathrow Layover Tours?</h3>
+        <h3>Why choose us?</h3>
         <p>
-          We create private London experiences for travellers who want elegance, comfort,
-          clarity, and the best use of limited time between flights.
+          We create private London tours for travellers who want comfort, flexibility,
+          personal service, and a smooth experience from pickup to drop-off.
         </p>
       </div>
 
       <div class="info-box">
-        <h3>What makes us elite</h3>
+        <h3>What makes our tours different</h3>
         <p>
-          Private service, flexible timing, airport pickup, luxury positioning, local guidance,
-          photo assistance, and smooth communication from booking to drop-off.
+          Flexible pickup locations, private service, tailored timing, local knowledge,
+          photo assistance, and optional upgrades designed around you rather than a fixed group schedule.
         </p>
       </div>
     </div>
@@ -754,24 +794,24 @@
   <section class="section alt" id="faq">
     <div class="container">
       <div class="section-head">
-        <span class="eyebrow">FAQ</span>
+        <span class="eyebrow" style="color:#cf1f2e;background:#fff1f2;border:none;">FAQ</span>
         <h2>Quick answers</h2>
       </div>
 
       <div class="faq">
         <details open>
-          <summary>Can I book this with a short layover?</summary>
-          <p>Yes. The express tour is best for travellers with around 5–10 hours between flights, depending on airport timings and traffic.</p>
+          <summary>Do you only offer Heathrow layover tours?</summary>
+          <p>No. We also offer private London tours with pickup from hotels, apartments, and other London accommodation.</p>
         </details>
 
         <details>
           <summary>Is the experience private?</summary>
-          <p>Yes. These are private tours designed for solo travellers, couples, families, and premium clients.</p>
+          <p>Yes. All experiences are designed as private tours for solo travellers, couples, families, and small groups.</p>
         </details>
 
         <details>
-          <summary>Can the itinerary change?</summary>
-          <p>Yes. Timing, traffic, and your preferences help shape the final route on the day.</p>
+          <summary>Can I choose where you pick me up and drop me off?</summary>
+          <p>Yes. Depending on your package, pickup and drop-off can be arranged from Heathrow, your hotel, your accommodation, or a central London location.</p>
         </details>
       </div>
     </div>
@@ -781,8 +821,8 @@
     <div class="container contact-wrap">
       <div>
         <div class="section-head" style="margin-bottom:18px;">
-          <span class="eyebrow">Booking</span>
-          <h2>Ready to book your private London experience?</h2>
+          <span class="eyebrow" style="color:#cf1f2e;background:#fff1f2;border:none;">Booking</span>
+          <h2>Book your private London tour</h2>
           <p>Replace the details below with your real WhatsApp, email, and Instagram.</p>
         </div>
 
@@ -794,12 +834,12 @@
 
           <div class="contact-card">
             <strong>Email</strong>
-            <span>hello@heathrowlayovertours.com</span>
+            <span>hello@yourtourcompany.com</span>
           </div>
 
           <div class="contact-card">
             <strong>Instagram</strong>
-            <span>@heathrowlayovertours</span>
+            <span>@yourtourcompany</span>
           </div>
         </div>
       </div>
@@ -820,31 +860,30 @@
         <div class="form-group">
           <label>Preferred package</label>
           <select>
-            <option>Heathrow Layover Express</option>
-            <option>London Highlights Tour</option>
-            <option>London Night Private Experience</option>
-            <option>Luxury Private Layover Experience</option>
+            <option>London Express Experience</option>
+            <option>London Highlights Private Tour</option>
+            <option>Luxury London Experience</option>
           </select>
         </div>
 
         <div class="form-group">
-          <label>Layover details</label>
-          <textarea placeholder="Arrival time, departure time, number of guests, and anything else important"></textarea>
+          <label>Pickup details</label>
+          <textarea placeholder="Pickup location, time, number of guests, and anything else important"></textarea>
         </div>
 
-        <a class="btn btn-gold" href="https://wa.me/447XXXXXXXXX?text=Hi%20I%20want%20to%20book%20a%20luxury%20Heathrow%20layover%20tour" target="_blank">Book on WhatsApp</a>
+        <a class="btn btn-primary" href="https://wa.me/447XXXXXXXXX?text=Hi%20I%20want%20to%20book%20a%20private%20London%20tour" target="_blank">Book on WhatsApp</a>
       </div>
     </div>
   </section>
 
   <footer class="footer">
     <div class="container footer-wrap">
-      <span>© 2026 Heathrow Layover Tours</span>
-      <span>Elite private London experiences from Heathrow</span>
+      <span>© 2026 London Private Tours</span>
+      <span>Heathrow, hotel, and London pickup available</span>
     </div>
   </footer>
 
-  <a class="wa-float" href="https://wa.me/447XXXXXXXXX?text=Hi%20I%20want%20to%20book%20a%20luxury%20Heathrow%20layover%20tour" target="_blank" aria-label="WhatsApp">✆</a>
+  <a class="wa-float" href="https://wa.me/447XXXXXXXXX?text=Hi%20I%20want%20to%20book%20a%20private%20London%20tour" target="_blank" aria-label="WhatsApp">✆</a>
 
 </body>
 </html>
